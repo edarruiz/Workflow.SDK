@@ -16,14 +16,4 @@ public interface IWorkflowStep {
     /// <returns>Returns a <see cref="IWorkflowStepResult"/> representing the 
     /// result of the step execution.</returns>
     IWorkflowStepResult Run(IWorkflowStepContext context);
-
-    /// <summary>
-    /// Runs the step, executing its business logic using the current <see cref="IWorkflowStepContext"/> shared data.
-    /// </summary>
-    /// <typeparam name="TData">Generic type representing the shared data passed from one
-    /// <see cref="IWorkflowStep"/> to another inside the <see cref="IWorkflow"/>.</typeparam>
-    /// <param name="context">The <see cref="IWorkflowStepContext"/> representing the shared data of the step.</param>
-    /// <returns>Returns a <see cref="IWorkflowStepResult"/> representing the 
-    /// result of the step execution.</returns>
-    IWorkflowStepResult Run<TData>(IWorkflowStepContext<TData> context);
 }
