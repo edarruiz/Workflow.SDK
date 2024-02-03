@@ -7,15 +7,17 @@
 	</PropertyGroup>
 
 	<ItemGroup Condition="'$(TargetFramework)' == 'net6.0' or '$(TargetFramework)' == 'net7.0'">
-		
 	</ItemGroup>
 
 	<ItemGroup Condition="'$(TargetFramework)' == 'net8.0'">
-		
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Folder Include="Primitives\" />
+		<PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="8.0.0" /> <!-- Compatible with 6.0 and 7.0-->
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Folder Include="Primitives\WorkflowStep\" />
 	</ItemGroup>
 
 </Project>
