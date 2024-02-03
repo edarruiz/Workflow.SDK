@@ -16,7 +16,7 @@ public static class WorkflowServiceCollectionExtensions {
     /// </summary>
     /// <param name="services">The <see cref="IServiceCollection"/> representing the collection of service descriptors.</param>
     /// <param name="hostOptions">The <see cref="WorkflowHostOptions"/> representing the workflow host configuration options.</param>
-    /// <returns></returns>
+    /// <returns>Returns the <see cref="IServiceCollection"/> representing the collection of service descriptors.</returns>
     public static IServiceCollection AddWorkflow(this IServiceCollection services, Action<WorkflowHostOptions>? hostOptions = null) {
         if (services.Any(descriptor => descriptor.ServiceType == typeof(WorkflowHostOptions))) {
             throw new InvalidOperationException(ERROR_SERVICE_ALREADY_INJECTED);
